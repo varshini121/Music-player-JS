@@ -47,6 +47,16 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.music-list {
+  display: none; /* Hide music list by default */
+  /* Other styling rules for music list */
+}
+
+.music-list.show {
+  display: block; /* Show music list when .show class is added */
+  /* You can also use 'display: flex;' or 'display: grid;' depending on your layout */
+}
+
 .top-bar i {
   font-size: 10px;
   color: var(--lightblack);
