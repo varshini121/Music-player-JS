@@ -270,26 +270,28 @@ input[type="range"]::-webkit-slider-thumb {
     position: absolute;
 }
 
+
+
 .music-list{
     position: absolute;
     background: var(--white);
-    width: 100%;
-    left: 0;
-    bottom: -55%;
-    opacity: 0;
-    pointer-events: none;
-    /* z-index: 5; */
+    width: 300px; /* Adjust width as needed */
+    right: -100%; /* Start off-screen to the right */
+    top: 0;
+    height: 100%;
+    opacity: 1; /* Keep opacity to 1 since we are sliding, not fading */
+    pointer-events: none; /* Disable interaction when not in view */
+    transition: right 0.3s ease-out; /* Animate the right property */
     padding: 15px 30px;
-    border-radius: 15px;
-    box-shadow: 0px -5px 10px rgba(0,0,0,0.1);
-    transition: all 0.15s ease-out;
+    border-radius: 0 0 0 15px; /* Adjusted for right slide */
+    box-shadow: -5px 0 10px rgba(0,0,0,0.1); /* Shadow direction adjusted */
 }
 
 .music-list.show{
-    bottom: 0;
-    opacity: 1;
-    pointer-events: auto;
+    right: 0; /* Slide in */
+    pointer-events: auto; /* Re-enable interaction */
 }
+
 
 .header .row{
     display: flex;

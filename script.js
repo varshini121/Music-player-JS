@@ -239,6 +239,7 @@ function clicked(element) {
   let getLiIndex = element.getAttribute("li-index");
   musicIndex = getLiIndex; //updating current song index with clicked li index
   loadMusic(musicIndex);
+  document.querySelector('.music-list').classList.toggle('show');
   playMusic();
   playingSong();
 }
@@ -255,3 +256,4 @@ function volume_change() {
   volume_show.innerHTML = recent_volume.value;
   mainAudio.volume = recent_volume.value / 100;
 }
+
